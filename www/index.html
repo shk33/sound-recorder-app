@@ -33,17 +33,45 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
+        <link rel="stylesheet" href="jqueryMobile/jquery.mobile-1.4.5.min.css">
+        <title>Sound Recorder App</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+        <div data-role="page" class="app" id="main">
+            <div data-role="header">
+                <h1>Sound Recorder</h1>
+            </div>
+            <div data-role="content">
+                <div data-role="fieldcontent">
+                    <h1>Welcome to sound recorder app</h1>
+                    <p>Click 'Record Sound' button in order to start recording. You will be able to see the playback button once the sound recording finishes.</p>
+                    <input type="hidden" id="location">
+                    <div class="center-wrapper">
+                        <input type="button" id="recordSound" data-icon="audio" value="Record Sound" class="center-button" data-inline="true">
+                        <input type="button" id="playSound" data-icon="refresh" value="Playback" class="center-button" data-inline="true"><br>
+                    </div>
+
+                    <div data-role="popup" id="recordSoundDialog" data-dismissable="false" style="width:250px">
+                        <div data-role="header">
+                            <h1>Recording</h1>
+                        </div>
+
+                        <div data-role="content">
+                            <div class="center-wrapper">
+                                <div id="soundDuration"></div>
+                                <input type="button" id="stopRecordingSound" value="Stop Recording" class="center-button" data-inline="true"><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Powered by Apache Cordova</h1>
             </div>
         </div>
+        <script src="jqueryMobile/jquery-1.11.3.min.js"></script>
+        <script src="jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
     </body>
 </html>
