@@ -10,6 +10,9 @@
 # Java class files
 *.class
 
+#Platforms folder
+platforms/
+
 # generated files - android project subfolder
 Android/bin/
 Android/gen/
