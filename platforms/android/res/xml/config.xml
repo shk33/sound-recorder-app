@@ -16,6 +16,8 @@
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
     <allow-intent href="market:*" />
+    <preference name="android-targetSdkVersion" value="16" />
+    <preference name="android-minSdkVersion" value="14" />
     <name>SoundRecorder</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
